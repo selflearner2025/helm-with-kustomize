@@ -14,7 +14,7 @@ spec:
   source:
     repoURL: https://github.com/selflearner2025/helm-with-kustomize.git
     targetRevision: test
-    path: kustomize/overlays/dev        # ← points to dev overlay
+    path: kustomize/foundations/overlays/dev        # ← points to dev overlay
 
   destination:
     server: https://kubernetes.default.svc

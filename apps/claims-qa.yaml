@@ -13,11 +13,11 @@ spec:
   source:
     repoURL: https://github.com/selflearner2025/helm-with-kustomize.git
     targetRevision: test
-    path: kustomize/overlays/qa         # ← points to qa overlay
+    path: kustomize/claims/overlays/qa         # ← points to qa overlay
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: camunda                  # ← same shared namespace
+    namespace: single-bpmn-ns                  # ← same shared namespace
 
   syncPolicy:
     automated:
