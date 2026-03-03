@@ -1,0 +1,6 @@
+# kustomize/overlays/dev/values-claims-dev.yaml
+env: dev
+configMapName: "claims-management-app-cm"
+artifactName: "claims-management-dev-v1.0.0.bpmn"
+artifactSha256: "dev-sha256-placeholder"
+artifactUrl: "https://nexus/claims/dev/v1.0.0.bpmn"

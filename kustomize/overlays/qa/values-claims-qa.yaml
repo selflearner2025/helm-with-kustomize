@@ -1,0 +1,6 @@
+# kustomize/overlays/qa/values-claims-qa.yaml
+env: qa
+configMapName: "claims-management-app-cm"
+artifactName: "claims-management-qa-v1.0.0.bpmn"
+artifactSha256: "qa-sha256-placeholder"
+artifactUrl: "https://nexus/claims/qa/v1.0.0.bpmn"

@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: claims-applicationset
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - env: dev
+          - env: qa
+
+  template:
+    metadata:
+      name: "claims-{{env}}"
+    spec:
+      project: default
+
+      source:
+        repoURL: https://github.com/selflearner2025/helm-with-kustomize.git
+        targetRevision: test
+        path: kustomize/overlays/{{env}}
+
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: single-bpmn-ns                  # ← single fixed namespace for all envs
+
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+          - ServerSideApply=true
