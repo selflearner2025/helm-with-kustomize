@@ -1,6 +1,6 @@
 # kustomize/overlays/dev/values-job-dev.yaml
-jobName: "claims-bpmn-sync-job-dev"
-configMapName: "claims-management-app-cm-dev"   # matches configmap name + env
+jobName: "foundations-bpmn-sync-job-dev"
+configMapName: "foundations-management-app-cm-dev"   # matches configmap name + env
 image: "alpine:3.20"
 ttlSecondsAfterFinished: 400
 activeDeadlineSeconds: 600

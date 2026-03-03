@@ -5,14 +5,14 @@ kind: Kustomization
 namespace: single-bpmn-ns                    # ← same namespace
 
 helmCharts:
-  - name: claims-chart
+  - name: foundations-chart
     repo: http://nexus-nexus-repository-manager.default.svc.cluster.local:8081/repository/helm-hosted/
     version: 0.1.0
-    releaseName: claims-qa            # ← different releaseName
-    valuesFile: values-claims-qa.yaml
+    releaseName: foundations-qa            # ← different releaseName
+    valuesFile: values-foundations-qa.yaml
 
   - name: job-chart
     repo: http://nexus-nexus-repository-manager.default.svc.cluster.local:8081/repository/helm-hosted/
     version: 0.5.0
-    releaseName: claims-job-qa
+    releaseName: foundations-job-qa
     valuesFile: values-job-qa.yaml

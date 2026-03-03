@@ -1,6 +1,6 @@
 # kustomize/overlays/qa/values-job-qa.yaml
-jobName: "claims-bpmn-sync-job-qa"
-configMapName: "claims-management-app-cm-qa"    # matches configmap name + env
+jobName: "foundations-bpmn-sync-job-qa"
+configMapName: "foundations-management-app-cm-qa"    # matches configmap name + env
 image: "alpine:3.20"
 ttlSecondsAfterFinished: 400
 activeDeadlineSeconds: 600
