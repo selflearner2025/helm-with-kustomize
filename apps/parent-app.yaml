@@ -1,0 +1,24 @@
+# apps/parent-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: claims-parent
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io   # deletes children when parent deleted
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/selflearner2025/helm-with-kustomize.git
+    targetRevision: test
+    path: apps                          # ← points to this folder containing child apps
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd                   # ← parent deploys child App objects into argocd ns
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
