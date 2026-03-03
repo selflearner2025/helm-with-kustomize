@@ -1,0 +1,24 @@
+# apps/foundations-parent.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: foundations-parent
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/selflearner2025/helm-with-kustomize.git
+    targetRevision: test
+    path: apps
+    directory:
+      include: "foundations-*.yaml"     # ← only picks up foundations child apps
+      exclude: "*-parent.yaml"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

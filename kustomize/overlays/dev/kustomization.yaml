@@ -14,5 +14,5 @@ helmCharts:
   - name: job-chart
     repo: http://nexus-nexus-repository-manager.default.svc.cluster.local:8081/repository/helm-hosted/
     version: 0.5.0
-    releaseName: job-dev              # ← releaseName scoped per env
+    releaseName: claims-job-dev              # ← releaseName scoped per env
     valuesFile: values-job-dev.yaml
