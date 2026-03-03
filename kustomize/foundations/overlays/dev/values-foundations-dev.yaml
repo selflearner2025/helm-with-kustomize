@@ -2,5 +2,5 @@
 env: dev
 configMapName: "foundations-management-app-cm"
 artifactName: "foundations-management-dev-v1.0.0.bpmn"
-artifactSha256: "dev-sha256-placeholder"
+artifactSha256: "changing foundations dev"
 artifactUrl: "https://nexus/foundations/dev/v1.0.0.bpmn"
