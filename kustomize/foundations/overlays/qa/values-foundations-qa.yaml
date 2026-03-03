@@ -2,5 +2,5 @@
 env: qa
 configMapName: "foundations-management-app-cm"
 artifactName: "foundations-management-qa-v1.0.0.bpmn"
-artifactSha256: "qa-sha256-placeholder"
+artifactSha256: "chaning foundations qa"
 artifactUrl: "https://nexus/foundations/qa/v1.0.0.bpmn"
