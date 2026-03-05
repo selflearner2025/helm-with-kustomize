@@ -2,5 +2,5 @@
 env: dev
 configMapName: "claims-management-app-cm"
 artifactName: "claims-management-dev-v1.0.0.bpmn"
-artifactSha256: "change claims dev"
+artifactSha256: "change claims dev added base"
 artifactUrl: "https://nexus/claims/dev/v1.0.0.bpmn"
